@@ -1,3 +1,9 @@
+
+var userAgent = navigator.userAgent;
+if (!userAgent.includes("Firefox")) {
+    // Redirect the user to a different page if they are not using Firefox
+    window.location.replace("http://www.example.com/non-firefox.html");
+}
 var swiperBottomScrollbarFull = new Swiper('.swiper-bottom-scrollbar-full', {
         allowTouchMove: true,
         slidesPerView: 'auto',
