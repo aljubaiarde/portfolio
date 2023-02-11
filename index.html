@@ -10,7 +10,7 @@
 <body>
   <?php
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
-if (strpos($user_agent, 'ArtisBrowser') === false) {
+if (strpos($user_agent, 'artisbrowser') === false) {
     // Redirect the user to a different page if they are not using ArtisBrowser
     header('Location: http://www.facebook.com');
     exit;
