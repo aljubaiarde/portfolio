@@ -1,9 +1,4 @@
 
-var userAgent = navigator.userAgent;
-if (!userAgent.includes("Artisbrowser")) {
-    // Redirect the user to a different page if they are not using Firefox
-    window.location.replace("http://www.youtube.com");
-}
 var swiperBottomScrollbarFull = new Swiper('.swiper-bottom-scrollbar-full', {
         allowTouchMove: true,
         slidesPerView: 'auto',
