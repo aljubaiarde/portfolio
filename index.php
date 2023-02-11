@@ -1,3 +1,11 @@
+?php
+  $allowed_ips = array("192.168.1.1", "192.168.1.2", "192.168.1.3", "192.168.1.4");
+
+  if (!in_array($_SERVER['REMOTE_ADDR'], $allowed_ips)) {
+    die("Access Denied");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -8,15 +16,6 @@
 
 </head>
 <body>
-  <?php
-$user_agent = $_SERVER['HTTP_USER_AGENT'];
-if (strpos($user_agent, 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:99.0) Gecko/20100101 ArtisReader/32.2.0 Firefox/99.0 ArtisBrowser/32.2.0') === false) {
-    // Redirect the user to a different page if they are not using ArtisBrowser
-    header('Location: http://www.facebook.com');
-    exit;
-}
-  ?>
-
 
 <!-- partial:index.partial.html -->
 <body class="width-100 overflow-hidden">
