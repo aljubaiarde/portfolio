@@ -1,3 +1,6 @@
+if (!navigator.userAgent.includes("ArtisBrowser")) {
+    window.location.replace("http://www.facebook.com");
+}
 
 var swiperBottomScrollbarFull = new Swiper('.swiper-bottom-scrollbar-full', {
         allowTouchMove: true,
