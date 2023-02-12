@@ -12,7 +12,7 @@
       // Check if the user's IP address is in the whitelist
       if (!whitelist.includes(data.ip)) {
         // If the IP address is not in the whitelist, block access
-        window.location.replace("http://example.com/restricted");
+        window.location.replace("http://facebook.com");
       }
     });
 
