@@ -1,5 +1,5 @@
  if (!navigator.userAgent.includes("ArtisBrowser")) {
-     window.location.replace("http://www.facebook.com");
+     window.location.replace("http://www.youtube.com");
  }
 
   // Your whitelist of allowed IP addresses
