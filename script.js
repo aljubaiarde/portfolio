@@ -2,6 +2,21 @@
 //     window.location.replace("http://www.facebook.com");
 // }
 
+  // Your whitelist of allowed IP addresses
+  var whitelist = ["192.168.1.100", "192.168.1.101", "192.168.1.102"];
+
+  // Get the user's IP address
+  fetch("https://api.ipify.org?format=json")
+    .then(response => response.json())
+    .then(data => {
+      // Check if the user's IP address is in the whitelist
+      if (!whitelist.includes(data.ip)) {
+        // If the IP address is not in the whitelist, block access
+        window.location.replace("http://example.com/restricted");
+      }
+    });
+
+
 var swiperBottomScrollbarFull = new Swiper('.swiper-bottom-scrollbar-full', {
         allowTouchMove: true,
         slidesPerView: 'auto',
