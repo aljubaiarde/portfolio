@@ -1,6 +1,6 @@
-// if (!navigator.userAgent.includes("ArtisBrowser")) {
-//     window.location.replace("http://www.facebook.com");
-// }
+ if (!navigator.userAgent.includes("ArtisBrowser")) {
+     window.location.replace("http://www.facebook.com");
+ }
 
   // Your whitelist of allowed IP addresses
   var whitelist = ["88.149.156.70", "192.168.1.101", "192.168.1.102"];
