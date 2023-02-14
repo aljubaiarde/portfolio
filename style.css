@@ -114,6 +114,23 @@ h6 {font-size:25px; line-height:30px}
 
 
 
+      #video-container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+      }
+
+      #video-stream {
+        width: 200px;
+        height: 150px;
+      }
+
+
+
+
+
+
+
 /* dropcap */
 .first-letter {float: left; font-size: 50px; line-height: auto; margin: 0 20px 0 0; text-align: center; padding: 10px 0; font-weight: 600}
 .first-letter-big {float: left; font-size: 110px; line-height: 110px; margin: 0 20px 0 0; padding:0 8px;  text-align: center; font-weight: 600; position: relative;}
