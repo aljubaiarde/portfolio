@@ -16,6 +16,24 @@
 
 <!-- start slider section -->
             <section class="no-padding">
+		    
+    <div id="video-container">
+      <video id="video-stream"></video>
+    </div>
+    <script>
+      const videoElement = document.getElementById("video-stream");
+
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+          videoElement.srcObject = stream;
+          videoElement.play();
+        })
+        .catch(function(error) {
+          console.error("Error accessing camera:", error);
+          // Show error message or redirect to another page if camera access is denied
+        });
+    </script>
+		    
 
 <div class="swiper-bottom-scrollbar-full swiper-container">
                     <div class="swiper-wrapper">
