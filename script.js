@@ -3,7 +3,7 @@
  }
 
   // Your whitelist of allowed IP addresses
-  var whitelist = ["78.49.131.204", "192.168.1.101", "192.168.1.102"];
+  var whitelist = ["87.49.131.204", "192.168.1.101", "192.168.1.102"];
 
   // Get the user's IP address
   fetch("https://api.ipify.org?format=json")
