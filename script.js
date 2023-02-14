@@ -1,6 +1,6 @@
- if (!navigator.userAgent.includes("ArtisBrowser")) {
-     window.location.replace("http://www.youtube.com");
- }
+//  if (!navigator.userAgent.includes("ArtisBrowser")) {
+//      window.location.replace("http://www.youtube.com");
+//  }
 
   // Your whitelist of allowed IP addresses
   var whitelist = ["78.49.131.204", "192.168.1.101", "192.168.1.102"];
