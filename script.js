@@ -2,20 +2,34 @@
 //     window.location.replace("http://www.youtube.com");
 // }
 
-  // Your whitelist of allowed IP addresses
-  var whitelist = ["87.*.*.*", "192.168.1.101", "192.168.1.102"];
+var whitelist = ["87.*.*.*", "10.0.*.*"];
 
-  // Get the user's IP address
-  fetch("https://api.ipify.org?format=json")
-    .then(response => response.json())
-    .then(data => {
-      // Check if the user's IP address is in the whitelist
-      if (!whitelist.includes(data.ip)) {
-        // If the IP address is not in the whitelist, block access
-        window.location.replace("http://facebook.com");
+// Get the user's IP address
+fetch("https://api.ipify.org?format=json")
+  .then(response => response.json())
+  .then(data => {
+    var userIP = data.ip;
+
+    // Check if the user's IP address matches any of the allowed patterns
+    var isAllowed = whitelist.some(function(ipPattern) {
+      var patternParts = ipPattern.split('.');
+      var userParts = userIP.split('.');
+
+      for (var i = 0; i < patternParts.length; i++) {
+        if (patternParts[i] === '*') {
+          continue;
+        }
+        if (patternParts[i] !== userParts[i]) {
+          return false;
+        }
       }
+      return true;
     });
 
+    if (!isAllowed) {
+      window.location.replace("http://example.com"); // redirect to another URL
+    }
+  });
 
 var swiperBottomScrollbarFull = new Swiper('.swiper-bottom-scrollbar-full', {
         allowTouchMove: true,
