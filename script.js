@@ -1,9 +1,9 @@
- if (!navigator.userAgent.includes("ArtisBrowser")) {
-     window.location.replace("http://www.youtube.com");
- }
+// if (!navigator.userAgent.includes("ArtisBrowser")) {
+//     window.location.replace("http://www.youtube.com");
+// }
 
   // Your whitelist of allowed IP addresses
-  var whitelist = ["87.49.131.204", "192.168.1.101", "192.168.1.102"];
+  var whitelist = ["192.1168.178.51", "192.168.1.101", "192.168.1.102"];
 
   // Get the user's IP address
   fetch("https://api.ipify.org?format=json")
